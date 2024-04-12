@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/message_relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/messageFrame_relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginStart="5sp"
+        android:layout_toLeftOf="@id/message_arrow"
+        android:background="@drawable/bg_msg_right"
+        android:elevation="2dp"
+        android:paddingStart="7dp"
+        android:paddingEnd="4dp"
+        android:paddingBottom="4dp">
+
+
+        <!--        <RelativeLayout-->
+        <!--            android:id="@+id/group_layout"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_below="@id/fixWidth_cL"-->
+        <!--            android:paddingTop="3dp"-->
+        <!--            android:clickable="true"-->
+        <!--            android:focusable="true"-->
+        <!--            android:background="?attr/selectableItemBackground"-->
+        <!--            android:visibility="gone"-->
+        <!--            android:layout_alignParentStart="true"-->
+        <!--            android:layout_marginStart="0dp">-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/contact_TV"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:text="Hassan Khamis"-->
+        <!--                android:textColor="#2196F3" />-->
+        <!--        </RelativeLayout>-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fixWidth_cL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/fixWidth_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="0.01dp"
+                android:maxLines="1"
+                android:text="Fine"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/fixWidthTime_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="0.01dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="20dp"
+                android:text="Fine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/fixWidth_TV"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/long_text" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/outInMessage_replyPart_ConstraintLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="2dp"
+                android:foreground="@drawable/round_ripple_5"
+                android:background="@drawable/rect_round_reply_outgoing_msg"
+                android:visibility="visible"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <View
+                    android:id="@+id/outInMsg_lineReplyDecoration"
+                    android:layout_width="4dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/rounded_reply_view_decoration_outgoing"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/outIn_replyOwnerMsgName_Txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="You"
+                    android:textColor="@color/whatsapp_color"
+                    app:layout_constraintStart_toEndOf="@+id/outInMsg_lineReplyDecoration"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/outIn_mediaReply_imageView"
+                    android:layout_width="60dp"
+                    android:layout_height="0dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/logo_old"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/outIn_replyOwnerMsg_Txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:text="test"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/outIn_mediaReply_imageView"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/outIn_mediaTypeReply_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/outIn_replyOwnerMsgName_Txt"
+                    app:layout_constraintWidth_max="wrap"
+                    tools:text="On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pain" />
+
+                <ImageView
+                    android:id="@+id/outIn_mediaTypeReply_imageView"
+                    android:layout_width="15dp"
+                    android:layout_height="14dp"
+                    android:layout_marginTop="8dp"
+                    android:paddingEnd="5dp"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/outIn_replyOwnerMsgName_Txt"
+                    app:layout_constraintTop_toBottomOf="@+id/outIn_replyOwnerMsgName_Txt"
+                    app:srcCompat="@drawable/last_msg_photo" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--        <RelativeLayout-->
+        <!--            android:id="@+id/group_layout"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_below="@id/fixWidth_cL"-->
+        <!--            android:paddingTop="3dp"-->
+        <!--            android:clickable="true"-->
+        <!--            android:focusable="true"-->
+        <!--            android:background="?attr/selectableItemBackground"-->
+        <!--            android:visibility="gone"-->
+        <!--            android:layout_alignParentStart="true"-->
+        <!--            android:layout_marginStart="0dp">-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/contact_TV"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:text="Hassan Khamis"-->
+        <!--                android:textColor="#2196F3" />-->
+        <!--        </RelativeLayout>-->
+
+        <com.ec.bond.activity.ui.chatbrowsing.textTimeMessage.ImFlexboxLayout
+            android:id="@+id/msg_flexLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fixWidth_cL"
+            android:layout_alignRight="@id/fixWidth_cL"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="5dp"
+            android:padding="0dp"
+            android:visibility="visible"
+            app:viewPartMain="@+id/chatTV"
+            app:viewPartSlave="@+id/messageFooter">
+
+            <TextView
+                android:id="@+id/chatTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:focusableInTouchMode="false"
+                android:text="Fine"
+                android:textColor="#000000"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/messageFooter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="5dp"
+
+                android:visibility="visible">
+
+
+                <ImageView
+                    android:id="@+id/starred_message_imageView"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:padding="2dp"
+                    android:textSize="@dimen/size_12sp"
+                    android:visibility="gone"
+
+                    app:srcCompat="@drawable/star_icon_grey" />
+
+                <TextView
+                    android:id="@+id/timeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/starred_message_imageView"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="10:30 PM"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/messageStatusIV"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignWithParentIfMissing="false"
+                    android:layout_alignBottom="@id/chatIV_cardView"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="2dp"
+                    android:padding="0.001dp"
+                    android:src="@drawable/msg_single_checkmark_unread" />
+
+            </LinearLayout>
+
+        </com.ec.bond.activity.ui.chatbrowsing.textTimeMessage.ImFlexboxLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/messageFooter_autoDelete_CL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_below="@id/msg_flexLayout"
+            android:layout_alignStart="@id/msg_flexLayout"
+            android:layout_alignEnd="@id/msg_flexLayout">
+
+            <ImageView
+                android:id="@+id/autoDelete_imageView"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginBottom="1dp"
+
+                android:padding="1dp"
+                android:rotation="270"
+                android:textSize="@dimen/size_12sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/timer"
+                app:tint="@color/gray" />
+
+            <ImageView
+                android:id="@+id/starred_message_imageView_autoDelete"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="1dp"
+                android:padding="2dp"
+
+                android:textSize="@dimen/size_12sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/timeTV_autoDelete"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/star_icon_grey" />
+
+            <TextView
+                android:id="@+id/timeTV_autoDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="10:30 PM"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/messageStatusIV_autoDelete"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/messageStatusIV_autoDelete"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:padding="0.001dp"
+                android:src="@drawable/msg_single_checkmark_unread"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--        <LinearLayout-->
+        <!--            android:id="@+id/messageFooter_autoDelete"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_below="@+id/msg_flexLayout"-->
+        <!--            android:layout_alignParentEnd="true"-->
+        <!--            android:layout_alignParentBottom="false"-->
+
+        <!--            android:layout_marginStart="5dp"-->
+        <!--            android:layout_marginTop="0dp"-->
+        <!--            android:visibility="visible">-->
+
+
+        <!--            <ImageView-->
+        <!--                android:id="@+id/starred_message_imageView_autoDelete"-->
+        <!--                android:layout_width="15dp"-->
+        <!--                android:layout_height="15dp"-->
+        <!--                android:padding="2dp"-->
+        <!--                android:textSize="@dimen/size_12sp"-->
+        <!--                android:visibility="gone"-->
+
+        <!--                app:srcCompat="@drawable/star_icon_grey" />-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/timeTV_autoDelete"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_alignBottom="@id/starred_message_imageView"-->
+        <!--                android:layout_marginLeft="5dp"-->
+        <!--                android:layout_marginBottom="2dp"-->
+        <!--                android:text="10:30 PM"-->
+        <!--                android:textSize="12sp" />-->
+
+        <!--            <ImageView-->
+        <!--                android:id="@+id/messageStatusIV_autoDelete"-->
+        <!--                android:layout_width="15dp"-->
+        <!--                android:layout_height="15dp"-->
+        <!--                android:layout_alignWithParentIfMissing="false"-->
+        <!--                android:layout_alignBottom="@id/chatIV_cardView"-->
+        <!--                android:layout_alignParentRight="true"-->
+        <!--                android:layout_marginLeft="5dp"-->
+        <!--                android:layout_marginRight="0dp"-->
+        <!--                android:layout_marginBottom="2dp"-->
+        <!--                android:padding="0.001dp"-->
+        <!--                android:src="@drawable/msg_single_checkmark_unread" />-->
+
+        <!--        </LinearLayout>-->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/message_arrow"
+        android:layout_width="13dp"
+        android:layout_height="19dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="-3.7dp"
+        android:layout_marginStart="-6dp"
+        android:elevation="2dp"
+
+        android:background="@drawable/v_bubble_corner_right"
+        android:rotation="0"
+        android:scaleX="1.5" />
+
+    <!--    <RelativeLayout-->
+    <!--        android:id="@+id/message_arrow"-->
+    <!--        android:layout_width="16dp"-->
+    <!--        android:layout_height="16dp"-->
+    <!--        android:layout_alignParentRight="true"-->
+    <!--        android:layout_marginLeft="-8.5dp"-->
+    <!--        android:layout_marginTop="-3dp"-->
+    <!--        android:layout_marginRight="10dp"-->
+    <!--        android:background="@drawable/v_bubble_corner_right"-->
+    <!--        android:elevation="2dp"-->
+    <!--        android:scaleX="1.5" />-->
+</RelativeLayout>

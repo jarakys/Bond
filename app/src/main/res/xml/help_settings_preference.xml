@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference
+        app:layout="@layout/layout_preference"
+        app:icon="@drawable/help_icon"
+        android:title="@string/faq" />
+    <Preference
+        app:layout="@layout/layout_preference"
+        app:icon="@drawable/contactus_icon"
+        android:title="@string/contact_us"
+        android:summary="@string/questions_need_help"/>
+    <Preference
+        app:layout="@layout/layout_preference"
+        android:icon="@drawable/terms_cond_icon"
+        android:title="@string/terms_and_privacy_policy" />
+    <Preference
+        app:layout="@layout/layout_preference"
+        android:icon="@drawable/info_icon"
+        android:title="@string/app_info" />
+</PreferenceScreen>

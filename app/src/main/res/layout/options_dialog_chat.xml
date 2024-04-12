@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:paddingLeft="@dimen/sixteen"
+    android:paddingRight="@dimen/sixteen"
+    android:paddingTop="@dimen/sixteen"
+    android:paddingBottom="@dimen/sixteen"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/action_replyMsgImg"
+        android:scaleType="centerInside"
+        android:layout_width="@dimen/thirty"
+        android:src="@drawable/reply_arrow_icon"
+        android:layout_height="@dimen/thirty"/>
+
+    <ImageView
+        android:id="@+id/action_starMsgImg"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_width="@dimen/thirty"
+        android:src="@drawable/star_icon"
+        android:scaleType="centerInside"
+        android:layout_height="@dimen/thirty"/>
+
+    <ImageView
+        android:id="@+id/action_deleteMsgImg"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_width="@dimen/thirty"
+        android:scaleType="centerInside"
+        android:src="@drawable/remove_icon"
+        android:layout_height="@dimen/thirty"/>
+
+    <ImageView
+        android:id="@+id/action_forwardMsgImg"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_width="@dimen/thirty"
+        android:scaleType="centerInside"
+        android:src="@drawable/forward_icon"
+        android:layout_height="@dimen/thirty"/>
+
+    <ImageView
+        android:id="@+id/action_msg_infoImg"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_width="@dimen/thirty"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_baseline_info_24"
+        android:layout_height="@dimen/thirty"/>
+
+    <ImageView
+        android:id="@+id/action_msg_copyImg"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_width="@dimen/thirty"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_baseline_content_copy_24"
+        android:layout_height="@dimen/thirty"/>
+
+</LinearLayout>

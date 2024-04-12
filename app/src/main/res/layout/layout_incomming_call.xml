@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/backgroundImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@color/colorPrimary"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:animateLayoutChanges="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/callAnswerVoiceOnlyView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="24dp"
+            android:visibility="visible"
+            android:scaleType="centerInside"
+            android:background="@drawable/primary_color_circle"
+            android:src="@drawable/ic_call_white_24dp" />
+
+        <ImageView
+            android:id="@+id/hangUpButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="24dp"
+            android:scaleType="centerInside"
+            android:background="@drawable/negative_color_circle"
+            android:src="@drawable/ic_call_end_white_24px" />
+
+<!--        <ImageView-->
+<!--            android:id="@+id/callAnswerCameraView"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_margin="24dp"-->
+<!--            android:visibility="gone"-->
+<!--            android:scaleType="centerInside"-->
+<!--            android:background="@drawable/primary_color_circle"-->
+<!--            android:src="@drawable/ic_videocam_white_24px" />-->
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/incomingTextRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/incomingCallTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="incoming call"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/conversationNameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/incomingCallTextView"
+            android:layout_marginBottom="16dp"
+            android:ellipsize="marquee"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            tools:text="Ankush" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/avatarImageView"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_centerInParent="true"
+        tools:srcCompat="@tools:sample/avatars[2]" />
+
+</RelativeLayout>

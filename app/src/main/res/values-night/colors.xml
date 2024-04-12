@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colors to apply in layouts -->
+    <color name="colorPrimary">@color/green_darker</color>
+    <color name="colorPrimaryDark">@color/green_darkest</color>
+    <color name="tab_active">@color/white</color>
+    <color name="tab_inactive">@color/green_light</color>
+    <color name="floating_message_create">@color/green</color>
+    <color name="channel_background">@color/off_white</color>
+    <color name="toolbar_background">@color/green_darker</color>
+    <color name="message_yours">@color/green_lightest</color>
+    <color name="message_theirs">@color/white</color>
+    <color name="message_input_button_inactive">@color/gray</color>
+    <color name="floating_message_send">@color/green_dark</color>
+
+    <!-- Palette Greens -->
+    <color name="green_lightest">#e2ffc7</color>
+    <color name="green_light">#E49794</color>
+    <color name="green">#B31E17</color>
+    <color name="green_dark">#B31E17</color>
+    <color name="green_darker">#B31E17</color>
+    <color name="green_darkest">#B31E17</color>
+
+    <!-- White & Gray -->
+    <color name="brownish_grey">#666666</color>
+    <color name="white_transparent">#00ffffff</color>
+    <color name="white">#FFF</color>
+    <color name="off_white">#e0e0e0</color>
+    <color name="gray">#88898b</color>
+
+    <color name="colorAccent">#2196F3</color>
+    <color name="colorAccent1">#2196F3</color>
+
+    <color name="primaryColor">#ffffff</color>
+    <color name="primaryLightColor">#ffffff</color>
+    <color name="primaryDarkColor">#cccccc</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="text_color">#327EF0</color>
+    <color name="lightgray">#E0E0E0</color>
+    <color name="dark_gray">#969595</color>
+    <color name="transparent_color">#00000000</color>
+
+    <color name="sign_up_start">#B31E17</color>
+    <color name="sign_up_end">#B31E17</color>
+    <color name="sign_up_version_text_color">#9F9F9F</color>
+    <color name="sign_up_bottom_rectangle_color">#C5514C</color>
+    <color name="sing_up_next_color">#7C9E8B</color>
+    <color name="red">#FF0000</color>
+    <color name="black">#000000</color>
+    <!-- A light gray -->
+    <color name="light_gray">#E1E1E1</color>
+    <color name="light_gray_selection">#F2F2F2</color>
+    <color name="help_settings_bk">#F2F1F6</color>
+
+    <color name="no_unreaded_msgs">#09D261</color>
+    <color name="whatsapp_color">#B31E17</color>
+    <color name="chat_brw_date_BK">#D4EAF4</color>
+    <color name="chat_brw_date_Txt">#555E62</color>
+    <color name="reply_color">#c4c4c4</color>
+    <color name="reply_history_color">#F7F7F7</color>
+    <color name="purple">#9B6BA7</color>
+    <color name="reply_history_color_outgoing_msg">#DAF7C0</color>
+    <color name="blue_selected_message">#8AB6D8E0</color>
+    <color name="blue_selected_documents">#C2E9F7</color>
+    <color name="toolbar_selected">#B31E17</color>
+    <color name="toolbar_color">#B31E17</color>
+    <color name="deleted_message">#708477</color>
+    <color name="down_btn">#F9F8F7</color>
+    <color name="grey_contact_name">#808080</color>
+    <color name="text_hint">#999999</color>
+    <color name="light_grey">#C5C5C5</color>
+    <color name="image_view_selected">#00CBDE</color>
+    <color name="black_transparent">#66000000</color>
+    <color name="text_selected">#3CB3FF</color>
+    <color name="cancel_red">#F47474</color>
+    <color name="seekbar_audio_color">#93A98B</color>
+    <color name="seekbar_audio_color_incoming">#34b7f1</color>
+    <color name="read_blue">#007DFF</color>
+    <color name="color_orange">#EF8435</color>
+    <color name="chat_auto_delete_BK">#FFF3C1</color>
+    <color name="screensot_color">#F04533</color>
+    <color name="colorPrimaryLightPix">#B31E17</color>
+    <color name="colorPrimaryPix">#B31E17</color>
+
+    <color name="cal_night">#000</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black_cal">#FF000000</color>
+    <color name="white_cal">#FFFFFFFF</color>
+    <color name="calc">#000</color>
+    <color name="icon_color">#9BD260</color>
+    <color name="circle_cal">#1F1F1F</color>
+
+</resources>

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/message_relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/messageFrame_relativeLayout"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:elevation="2dp"
+        android:layout_toLeftOf="@id/message_arrow"
+        android:background="@drawable/bg_msg_right"
+        android:paddingStart="7dp"
+        android:paddingEnd="4dp"
+        android:paddingTop="7dp"
+        android:paddingBottom="4dp">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="280dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="3dp"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:elevation="0dp"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:id="@+id/audioSender_IV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/logo_old" />
+            </androidx.cardview.widget.CardView>
+
+
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/pause_IV"-->
+            <!--                android:layout_width="50dp"-->
+            <!--                android:layout_height="30dp"-->
+            <!--                android:layout_gravity="center"-->
+            <!--                android:padding="0dp"-->
+            <!--                android:visibility="gone"-->
+            <!--                app:srcCompat="@drawable/pause_ic" />-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/loading_CV"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:clipToPadding="false"
+                    android:elevation="0dp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="#00000000"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp"
+                    app:cardUseCompatPadding="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/loading_CL"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ProgressBar
+                            android:id="@+id/loading_progressBar"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginEnd="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:background="@drawable/circle_document_shape"
+                            android:indeterminate="false"
+                            android:max="100"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/circular_document_progress_bar"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_close_foreground"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.54"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="#8FA388" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:id="@+id/play_IV"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:padding="0dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="visible"
+
+                    app:srcCompat="@drawable/play_ic" />
+
+                <ImageView
+                    android:id="@+id/autoDelete_imageView"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="10dp"
+                    android:rotation="270"
+                    android:textSize="@dimen/size_12sp"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/timer"
+                    app:tint="@color/gray" />
+            </RelativeLayout>
+
+
+            <SeekBar
+                android:id="@+id/audioSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:progress="0"
+                android:progressBackgroundTint="@color/seekbar_audio_color"
+                android:progressTint="@color/seekbar_audio_color"
+                android:thumbTint="@color/seekbar_audio_color" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@id/linearLayout4"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="-5dp"
+            android:src="@drawable/mic_outgoing" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/linearLayout4"
+            android:layout_marginStart="100dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/audioDuration_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+
+                android:drawablePadding="5dp"
+                android:textSize="@dimen/size_12sp"
+                tools:text="0:01" />
+
+            <TextView
+                android:id="@+id/chatTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+
+                android:drawablePadding="5dp"
+                android:textSize="@dimen/size_12sp" />
+
+            <ImageView
+                android:id="@+id/starred_message_imageView"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="5dp"
+                android:padding="2dp"
+
+                android:visibility="gone"
+                app:srcCompat="@drawable/star_icon_grey" />
+
+            <TextView
+                android:id="@+id/timeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="5dp"
+                android:drawablePadding="5dp"
+
+                android:text="5:05"
+                android:textSize="@dimen/size_12sp" />
+
+            <ImageView
+                android:id="@+id/messageStatusIV"
+                android:layout_width="15dp"
+                android:layout_height="9dp"
+                android:layout_gravity="bottom|end"
+                android:layout_marginBottom="3dp"
+                android:padding="0.001dp"
+                android:src="@drawable/message_got_read_receipt_from_target" />
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/message_arrow"
+        android:layout_width="13dp"
+        android:layout_height="19dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="-3.7dp"
+        android:layout_marginStart="-6dp"
+        android:elevation="2dp"
+
+        android:background="@drawable/v_bubble_corner_right"
+        android:rotation="0"
+        android:scaleX="1.5" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/message_arrow"-->
+<!--        android:layout_width="20dp"-->
+<!--        android:layout_height="25dp"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_marginLeft="-8.5dp"-->
+<!--        android:layout_marginTop="-7dp"-->
+<!--        android:background="@null"-->
+<!--        android:scaleX="1.5"-->
+<!--        android:src="@drawable/v_bubble_corner_right" />-->
+</RelativeLayout>
+
+

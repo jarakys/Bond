@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <ImageView
+        android:id="@+id/backgroundFriendView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:scaleType="centerCrop"
+        android:src="@color/gray"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <RelativeLayout
+        android:id="@+id/incomingVideoTextureParentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:visibility="gone">
+
+        <TextureView
+            android:id="@+id/incomingVideoTextureView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:keepScreenOn="true"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <com.ec.bond.custom_views.StickyDragView
+        android:id="@+id/videoCallParentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cameraPreviewParentView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:cardBackgroundColor="@android:color/transparent">
+
+            <androidx.camera.view.PreviewView
+                android:id="@+id/cameraPreview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.cardview.widget.CardView>
+    </com.ec.bond.custom_views.StickyDragView>
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/call_header" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/conferenceCallRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginVertical="@dimen/_8sdp"
+        android:background="@color/colorPrimary"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/backgroundConferenceViewParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:visibility="gone">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/backgroundConferenceView"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/contact"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="1dp" />
+
+        <ImageButton
+            android:id="@+id/end_conference_call"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_gravity="end"
+            android:background="@drawable/delete_icon_background"
+            android:src="@drawable/delete_icon"
+            android:tint="@color/white" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/callControlsLinearLayoutView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:animateLayoutChanges="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:paddingVertical="10dp">
+
+        <ImageView
+            android:id="@+id/speakerButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/button_bg"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_volume_up_white_24dp"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/flipCameraButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@color/transparent_color"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_change_camera"
+            android:visibility="gone"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/stopCameraButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:background="@color/transparent_color"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_camera_stop"
+            android:visibility="gone"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/muteButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:background="@color/transparent_color"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_mic_off_white_24px"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:layout_above="@id/callControlsLinearLayoutView"
+        android:layout_height="wrap_content">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/hangUpButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:scaleType="center"
+            android:src="@drawable/ic_call_end_white_24px"
+            app:backgroundTint="@color/red"
+            app:fabSize="normal"
+            app:tint="@color/white" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/answerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:layout_above="@id/callControlsLinearLayoutView"
+            android:layout_centerHorizontal="true"
+            android:scaleType="center"
+            android:src="@drawable/ic_call_white_24dp"
+            app:backgroundTint="@color/no_unreaded_msgs"
+            app:fabSize="normal"
+            app:tint="@color/white" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

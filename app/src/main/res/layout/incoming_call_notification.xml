@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/time_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/phone_call_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:contentDescription="@string/app_name"
+            app:tint="@color/green_dark"
+            android:src="@drawable/ic_baseline_phone_callback_24" />
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/green_darkest"
+            android:textSize="@dimen/_12sdp" />
+
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            android:text="• now"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/person_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            tools:text="Sandip singh" />
+
+        <TextView
+            android:id="@+id/voice_call"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/person_name"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="@string/incoming_voice_call"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:paddingVertical="@dimen/_6sdp">
+
+        <TextView
+            android:id="@+id/decline_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:padding="@dimen/_2sdp"
+            android:text="@string/decline_text"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/answer_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:padding="@dimen/_2sdp"
+            android:text="@string/answer_text"
+            android:textColor="@color/no_unreaded_msgs"
+            android:textSize="@dimen/_10sdp" />
+    </LinearLayout>
+</LinearLayout>

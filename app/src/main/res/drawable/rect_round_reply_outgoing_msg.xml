@@ -1,0 +1,10 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:endColor="@color/reply_history_color_outgoing_msg"
+        android:centerColor="@color/reply_history_color_outgoing_msg"
+        android:startColor="@color/reply_history_color_outgoing_msg"
+        android:angle="270" />
+    <corners
+        android:radius="5dp" />
+
+</shape>

@@ -1,0 +1,33 @@
+{
+  "buildFiles": [
+    "/Users/samuelelandi/src/bond/bond-x-app-for-android/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/samuelelandi/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+      "-C",
+      "/Users/samuelelandi/src/bond/bond-x-app-for-android/app/.cxx/cmake/arm8Debug/arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/samuelelandi/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+    "-C",
+    "/Users/samuelelandi/src/bond/bond-x-app-for-android/app/.cxx/cmake/arm8Debug/arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "hello-jni-Debug-arm64-v8a": {
+      "artifactName": "hello-jni",
+      "buildCommandComponents": [
+        "/Users/samuelelandi/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+        "-C",
+        "/Users/samuelelandi/src/bond/bond-x-app-for-android/app/.cxx/cmake/arm8Debug/arm64-v8a",
+        "hello-jni"
+      ],
+      "abi": "arm64-v8a",
+      "output": "/Users/samuelelandi/src/bond/bond-x-app-for-android/app/build/intermediates/cmake/arm8Debug/obj/arm64-v8a/libhello-jni.so",
+      "runtimeFiles": []
+    }
+  }
+}

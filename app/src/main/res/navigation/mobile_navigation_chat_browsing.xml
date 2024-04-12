@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation_chat_list"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.ec.bond.activity.ui.chatbrowsing.ChatBrowsingFragment"
+        android:label="@string/title_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_pickerFragment"
+            app:destination="@id/pickerFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_forwardMessageFragment"
+            app:destination="@id/forwardMessageFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_home_to_messageInfoFragment"
+            app:destination="@id/messageInfoFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_home_to_openImageFragment"
+            app:destination="@id/openImageFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_imageViewerFragment"
+            app:destination="@id/imageViewerFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_navigation_home_to_switchUserFragment"
+            app:destination="@id/switchUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.ec.bond.activity.ui.camera.CameraFragment"
+        android:label="CameraFragment">
+        <argument
+            android:name="camera_id"
+            android:defaultValue='"0"'
+            app:argType="string" />
+        <argument
+            android:name="pixel_format"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_cameraFragment_to_imageViewerFragment"
+            app:destination="@id/imageViewerFragment" />
+        <argument
+            android:name="recepient"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/imageViewerFragment"
+        android:name="com.ec.bond.activity.ui.imageviewer.ImageViewerFragment"
+        android:label="ImageViewerFragment"   >
+
+    <argument
+
+        android:name="file_path"
+        app:argType="string[]" />
+
+    <argument
+        android:name="orientation"
+        app:argType="integer"
+        android:defaultValue="0" />
+
+    <argument
+        android:name="depth"
+        app:argType="boolean"
+        android:defaultValue="false" />
+        <argument
+            android:name="recepient"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_imageViewerFragment_to_contactListSelectFragment"
+            app:destination="@id/contactListSelectFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/pickerFragment"
+        android:name="com.ec.bond.activity.ui.picker.PickerFragment"
+
+        android:label="PickerFragment" >
+        <action
+            android:id="@+id/action_pickerFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+        <argument
+            android:name="recipient"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_pickerFragment_to_imageViewerFragment"
+            app:destination="@id/imageViewerFragment" />
+        <action
+            android:id="@+id/action_pickerFragment_to_chooseDocumentsFragment"
+            app:destination="@id/chooseDocumentsFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </dialog>
+    <fragment
+        android:id="@+id/contactListSelectFragment"
+        android:name="com.ec.bond.activity.ui.contactlistselect.ContactListSelectFragment"
+        android:label="ContactListSelectFragment" >
+        <argument
+            android:name="path"
+            app:argType="string" />
+        <argument
+            android:name="caption"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/forwardMessageFragment"
+        android:name="com.ec.bond.activity.ui.chatbrowsing.forwardmessage.ForwardMessageFragment"
+        android:label="ForwardMessageFragment" >
+
+        <argument
+            android:name="messages"
+            app:argType="com.ec.bond.activity.ui.chatbrowsing.MessageItem[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/messageInfoFragment"
+        android:name="com.ec.bond.activity.ui.chatbrowsing.messageinfo.MessageInfoFragment"
+        android:label="MessageInfoFragment">
+        <argument
+            android:name="message"
+            app:argType="com.ec.bond.blackbox.model.Message" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/openImageFragment"
+        android:name="com.ec.bond.activity.ui.chatbrowsing.openimage.OpenImageFragment"
+        android:label="OpenImageFragment">
+        <argument
+            android:name="path"
+            app:argType="string" />
+        <argument
+            android:name="messageBody"
+            app:argType="string" />
+        <argument
+            android:name="isImage"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseDocumentsFragment"
+        android:name="com.ec.bond.activity.ui.chatbrowsing.document.ChooseDocumentsFragment"
+        android:label="ChooseDocumentsFragment" />
+    <fragment
+        android:id="@+id/switchUserFragment"
+        android:name="com.ec.bond.activity.ui.chatbrowsing.switchUser.SwitchUserFragment"
+        android:label="SwitchUserFragment" />
+
+</navigation>

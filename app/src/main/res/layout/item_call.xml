@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:longClickable="true">
+
+    <!-- <com.google.android.material.card.MaterialCardView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_margin="@dimen/_3sdp"
+         android:layout_marginStart="10dp"
+         android:layout_marginTop="5dp"
+         android:layout_marginEnd="10dp"
+         app:cardCornerRadius="@dimen/_5sdp"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+         tools:cardCornerRadius="3dp"
+         tools:cardElevation="10dp"
+         tools:cardUseCompatPadding="true">-->
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/contact_imageView"
+        android:layout_width="@dimen/_44sdp"
+        android:layout_height="@dimen/_44sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:src="@drawable/contact"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/contact_name_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="Name"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintBottom_toTopOf="@+id/date_txt"
+        app:layout_constraintStart_toEndOf="@+id/contact_imageView"
+        app:layout_constraintTop_toTopOf="@+id/contact_imageView"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/date_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:text="26/7/20, 2:20 PM"
+        app:layout_constraintBottom_toBottomOf="@+id/contact_imageView"
+        app:layout_constraintStart_toEndOf="@+id/call_status_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/contact_name_txt" />
+
+    <ImageButton
+        android:id="@+id/call_Btn"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="0dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/green_dark"
+        app:srcCompat="@drawable/phone_call" />
+
+    <ImageView
+        android:id="@+id/call_status_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/date_txt"
+        app:layout_constraintStart_toStartOf="@+id/contact_name_txt"
+        app:srcCompat="@drawable/done_call" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/light_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/call_status_imageView"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/item_selectedCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_background_selected"
+        android:padding="@dimen/_2sdp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/contact_imageView"
+        app:layout_constraintEnd_toEndOf="@+id/contact_imageView"
+        app:srcCompat="@drawable/selected_ok" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

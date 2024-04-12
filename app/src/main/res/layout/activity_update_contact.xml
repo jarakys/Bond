@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="#FFFFFF">
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tb_toolbarsearch"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:theme="@style/ToolbarTheme"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@android:color/white" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutUn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fourty"
+            android:layout_marginTop="@dimen/thirty"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginLeft="@dimen/twenty"
+            android:layout_marginRight="@dimen/twenty"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/buttons_rectangle"
+            app:layout_constraintTop_toBottomOf="@+id/tb_toolbarsearch">
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="@dimen/twenty_five"
+                android:layout_height="@dimen/twenty_five"
+                android:layout_marginLeft="@dimen/twelve"
+                android:src="@drawable/ic_user"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+            <EditText
+                android:id="@+id/userNameEt"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:hint="@string/name"
+                android:textColorHint="@color/brownish_grey"
+                android:textSize="@dimen/sixteen"
+                android:background="@null"
+                android:gravity="left"
+                android:paddingLeft="@dimen/twelve"
+                android:singleLine="true"
+                android:textColor="@color/brownish_grey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView1"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutUn1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fourty"
+            android:layout_marginTop="@dimen/fifty"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginLeft="@dimen/twenty"
+            android:layout_marginRight="@dimen/twenty"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/buttons_rectangle"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutUn">
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="@dimen/twenty_five"
+                android:layout_height="@dimen/twenty_five"
+                android:layout_marginLeft="@dimen/twelve"
+                android:src="@drawable/ic_user"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+            <EditText
+                android:id="@+id/userNameEt1"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:hint="@string/surname"
+                android:textColorHint="@color/brownish_grey"
+                android:textSize="@dimen/sixteen"
+                android:background="@null"
+                android:gravity="left"
+                android:paddingLeft="@dimen/twelve"
+                android:singleLine="true"
+                android:textColor="@color/brownish_grey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView11"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutUn3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fourty"
+            android:layout_marginTop="@dimen/fifty"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginLeft="@dimen/twenty"
+            android:layout_marginRight="@dimen/twenty"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/buttons_rectangle"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutUn1">
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="@dimen/twenty_five"
+                android:layout_height="@dimen/twenty_five"
+                android:layout_marginLeft="@dimen/twelve"
+                android:src="@drawable/ic_user"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+            <EditText
+                android:id="@+id/userTitleEt1"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:hint="@string/title"
+                android:textColorHint="@color/brownish_grey"
+                android:textSize="@dimen/sixteen"
+                android:background="@null"
+                android:gravity="left"
+                android:paddingLeft="@dimen/twelve"
+                android:singleLine="true"
+                android:textColor="@color/brownish_grey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView13"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutUn4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fourty"
+            android:layout_marginTop="@dimen/fifty"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginLeft="@dimen/twenty"
+            android:layout_marginRight="@dimen/twenty"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/buttons_rectangle"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutUn3">
+
+            <ImageView
+                android:id="@+id/imageView14"
+                android:layout_width="@dimen/twenty_five"
+                android:layout_height="@dimen/twenty_five"
+                android:layout_marginLeft="@dimen/twelve"
+                android:src="@drawable/ic_phone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+            <EditText
+                android:id="@+id/userNumberEt1"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone_number"
+                android:textColorHint="@color/brownish_grey"
+                android:textSize="@dimen/sixteen"
+                android:background="@null"
+                android:gravity="left"
+                android:inputType="number"
+                android:paddingLeft="@dimen/twelve"
+                android:singleLine="true"
+                android:textColor="@color/brownish_grey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView14"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addBt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fourty"
+            android:layout_marginTop="@dimen/thirty"
+            android:layout_marginLeft="@dimen/thirty_five"
+            android:layout_marginRight="@dimen/thirty_five"
+            android:text="@string/update_contact"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/button_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutUn4">
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

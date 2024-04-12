@@ -1,0 +1,1 @@
+/Users/samuelelandi/src/bond/bond-x-app-for-android/app/src/main/cpp/CMakeLists.txt

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_toolbarsearch"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ToolbarTheme"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="@android:color/white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_contact_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        android:background="@color/primaryLightColor"
+        app:layout_constraintBottom_toTopOf="@+id/dialpad_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_toolbarsearch" />
+
+
+    <com.ec.bond.utils.MyEditText
+        android:id="@+id/dialpad_input"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:gravity="center"
+        android:inputType="phone"
+        android:textColor="@color/black"
+        android:textCursorDrawable="@null"
+        app:layout_constraintBottom_toTopOf="@+id/dialpad_wrapper"
+        android:textSize="@dimen/dialpad_text_size"
+        android:background="@color/light_gray"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+    <include
+        android:id="@+id/dialpad_wrapper"
+        layout="@layout/dialpad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/dialpad_call_button" />
+
+    <ImageView
+        android:id="@+id/dialpad_call_button"
+        android:layout_width="@dimen/dialpad_button_size"
+        android:layout_height="@dimen/dialpad_button_size"
+        android:layout_marginBottom="@dimen/activity_margin"
+        android:background="@drawable/circle_background_gree"
+        android:elevation="@dimen/medium_margin"
+        android:padding="@dimen/normal_margin"
+        android:src="@drawable/ic_phone_vector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/dialpad_clear_char"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/activity_margin"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:paddingStart="@dimen/activity_margin"
+        android:paddingEnd="@dimen/activity_margin"
+        android:src="@drawable/ic_backspace_vector"
+        app:layout_constraintBottom_toBottomOf="@+id/dialpad_call_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dialpad_call_button"
+        app:layout_constraintTop_toTopOf="@+id/dialpad_call_button" />
+
+    <ImageView
+        android:id="@+id/dialpad_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:paddingStart="@dimen/activity_margin"
+        android:paddingEnd="@dimen/activity_margin"
+        android:src="@drawable/ic_baseline_dialpad_24"
+        app:layout_constraintBottom_toBottomOf="@+id/dialpad_call_button"
+        app:layout_constraintEnd_toStartOf="@+id/dialpad_call_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dialpad_call_button" />
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/selectedContacts_coordinatorLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tb_toolbarsearch"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:visibility="visible"
+            app:backgroundTint="@color/colorPrimary"
+            app:fabAlignmentMode="end"
+            app:fabCradleMargin="0dp"
+            app:fabCradleRoundedCornerRadius="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <TextView
+                android:id="@+id/textViewNames"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25sp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5sp"
+            app:srcCompat="@drawable/right_arrow_grey" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingButtonSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="28dp"
+        android:foregroundTint="#FFFFFF"
+        android:src="@drawable/add_new_image"
+        android:tint="#FFFFFF"
+        app:tint="@color/white"
+        android:visibility="gone"
+        app:backgroundTint="@color/floating_message_create"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

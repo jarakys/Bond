@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/autoDelete_relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_color">
+    <LinearLayout
+        android:id="@+id/blank_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/transparent_color"
+        android:orientation="horizontal" />
+    <Button
+        android:id="@+id/cancelAutoDelete_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:backgroundTint="@color/primaryColor"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:layout_above="@+id/blank_cardView"
+        android:text="Cancel"
+        android:textColor="#4F8DD2"
+        app:cornerRadius="10dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/autoDelete_CV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/cancelAutoDelete_btn"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="5dp"
+        app:cardCornerRadius="10dp">
+        <!--        <RelativeLayout-->
+        <!--            android:id="@+id/cardView2"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_above="@id/cancelAutoDelete_btn"-->
+        <!--            android:layout_alignParentBottom="false"-->
+        <!--            android:layout_marginStart="50dp"-->
+        <!--            android:layout_marginEnd="50dp"-->
+        <!--            android:layout_marginBottom="20dp">-->
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginBottom="116dp"
+            android:padding="15dp"
+            android:text="Please set self-\ndisappearing time."
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="0dp"
+            android:background="#CECCCF"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!--            <com.warkiz.widget.IndicatorSeekBar-->
+            <!--                android:id="@+id/autoDelete_seekbar"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:max="5"-->
+            <!--                android:progress="1"-->
+            <!--                app:isb_clear_default_padding="false"-->
+            <!--                app:isb_ticks_count="5" />-->
+            <!--            <com.warkiz.widget.IndicatorSeekBar-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                app:isb_max="-40"-->
+            <!--                app:isb_min="-100"-->
+            <!--                app:isb_progress="-70"-->
+            <!--                app:isb_seek_smoothly="true"-->
+            <!--                app:isb_show_indicator="rectangle"-->
+            <!--                app:isb_show_tick_marks_type="square"-->
+            <!--                app:isb_show_tick_texts="true"-->
+            <!--                app:isb_thumb_adjust_auto="false"-->
+            <!--                app:isb_tick_marks_color="@color/selector_tick_marks_color"-->
+            <!--                app:isb_ticks_count="5"-->
+            <!--                app:isb_track_progress_color="@color/color_blue"-->
+            <!--                app:isb_track_progress_size="3dp" />-->
+
+            <com.warkiz.widget.IndicatorSeekBar
+                android:id="@+id/autoDelete_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="false"
+                app:isb_clear_default_padding="false"
+                app:isb_indicator_color="#3F51B5"
+                app:isb_indicator_text_color="#2196F3"
+                app:isb_progress="40"
+                app:isb_show_indicator="none"
+                app:isb_show_tick_marks_type="oval"
+                app:isb_thumb_color="#FFFFFF"
+                app:isb_thumb_size="30dp"
+                app:isb_thumb_text_color="#03A9F4"
+                app:isb_tick_marks_color="@color/selector_tick_marks_color"
+                app:isb_tick_texts_array="@array/tick_below_text_length_5"
+                app:isb_tick_texts_color="#000000"
+                app:isb_tick_texts_size="10dp"
+                app:isb_tick_texts_typeface="normal"
+                app:isb_ticks_count="6"
+                app:isb_track_background_color="#6B686B"
+                app:isb_track_progress_color="#007AFA" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:weightSum="6">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/_1_hour"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/_2_hours"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/_1_day"
+                    android:textAlignment="center"
+
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/_2_days"
+                    android:textAlignment="center"
+
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/_1_week"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd"
+                    android:text="@string/never"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </LinearLayout>
+<!--        </RelativeLayout>-->
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

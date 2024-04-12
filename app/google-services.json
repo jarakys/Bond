@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "958045450647",
+    "project_id": "bond-f1bec",
+    "storage_bucket": "bond-f1bec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:958045450647:android:07e4be5297851edf63d4d2",
+        "android_client_info": {
+          "package_name": "com.ec.bond"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "958045450647-ugpev8jao1juud0bvac0b4u9gnn92o9i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCypFuV2mVWG3-CoWmqDWOZ_N7tw4PHP0I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "958045450647-ugpev8jao1juud0bvac0b4u9gnn92o9i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

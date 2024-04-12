@@ -1,0 +1,1 @@
+/Users/samuelelandi/src/bond/bond-x-app-for-android/app/build/intermediates/cmake/arm8Debug/obj/arm64-v8a

@@ -1,0 +1,9 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference
+        app:fragment="com.ec.bond.activity.ui.settings.chatsettings.WallpaperFragment"
+        app:icon="@drawable/ic_wallpaper"
+        app:key="wallpaper_header"
+        app:title="@string/wallpaper_title"
+        app:layout="@layout/layout_preference"
+        />
+</PreferenceScreen>

@@ -1,0 +1,13 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:endColor="@color/whatsapp_color"
+        android:centerColor="@color/whatsapp_color"
+        android:startColor="@color/whatsapp_color"
+        android:angle="270" />
+    <corners
+        android:bottomLeftRadius="5dp"
+        android:bottomRightRadius="0dp"
+        android:topLeftRadius="5dp"
+        android:topRightRadius="0dp"/>
+
+</shape>

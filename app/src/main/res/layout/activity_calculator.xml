@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cal_night"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/resultTv"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:textSize="@dimen/fourty_eight"
+        android:text=""
+        android:padding="@dimen/sixteen"
+        android:gravity="right|bottom"
+        android:textColor="@color/white_cal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline2"></TextView>
+    
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:weightSum="5"
+        android:paddingLeft="@dimen/sixteen"
+        android:paddingRight="@dimen/sixteen"
+        android:paddingBottom="@dimen/twenty"
+        android:paddingTop="@dimen/sixteen"
+        android:background="@color/calc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline2">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:weightSum="4"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/clearLy"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/c"
+                    android:textColor="#E4684B"
+                    android:gravity="center"
+                    android:background="@drawable/circle_calculator"
+                    android:textSize="@dimen/thirty">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/percentageLy"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/icon_color"
+                    android:text="@string/percentage"
+                    android:gravity="center"
+                    android:background="@drawable/circle_calculator"
+                    android:textSize="@dimen/thirty">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/eraseLy"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@drawable/circle_calculator">
+                <ImageView
+                    android:layout_width="@dimen/thirty_five"
+                    android:layout_height="@dimen/thirty_five"
+                    android:textColor="@color/white"
+                    android:text="@string/c"
+                    android:tint="@color/icon_color"
+                    android:src="@drawable/clear"
+                    android:textSize="@dimen/eighteen">
+
+                </ImageView>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/divideLy"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@drawable/circle_calculator">
+                    <ImageView
+                        android:layout_width="@dimen/twenty_five"
+                        android:layout_height="@dimen/twenty_five"
+                        android:textColor="@color/white"
+                        android:text="@string/divide"
+                        android:src="@drawable/divide"
+                        android:tint="@color/icon_color"
+                        android:textSize="@dimen/eighteen">
+
+                    </ImageView>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:weightSum="4"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/sevenLy"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_cal"
+                    android:gravity="center"
+                    android:text="@string/seven"
+                    android:background="@drawable/circle_calculator"
+                    android:textSize="@dimen/thirty">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/eightLy"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_cal"
+                    android:text="@string/eight"
+                    android:gravity="center"
+                    android:background="@drawable/circle_calculator"
+                    android:textSize="@dimen/thirty">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nineLy"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_cal"
+                    android:text="@string/nine"
+                    android:gravity="center"
+                    android:background="@drawable/circle_calculator"
+                    android:textSize="@dimen/thirty">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/multiplyLy"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@drawable/circle_calculator">
+                <ImageView
+                    android:layout_width="@dimen/eighteen"
+                    android:layout_height="@dimen/eighteen"
+                    android:textColor="@color/white"
+                    android:text="@string/multiply"
+                    android:tint="@color/icon_color"
+                    android:src="@drawable/multiply"
+                    android:textSize="@dimen/eighteen">
+
+                </ImageView>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:weightSum="4"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/fourLy"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_cal"
+                    android:text="@string/four"
+                    android:gravity="center"
+                    android:background="@drawable/circle_calculator"
+                    android:textSize="@dimen/thirty">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fiveLy"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_cal"
+                    android:text="@string/five"
+                    android:gravity="center"
+                    android:background="@drawable/circle_calculator"
+                    android:textSize="@dimen/thirty">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sixLy"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_cal"
+                    android:text="@string/six"
+                    android:gravity="center"
+                    android:background="@drawable/circle_calculator"
+                    android:textSize="@dimen/thirty">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/minusLy"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@drawable/circle_calculator">
+                <ImageView
+                    android:layout_width="@dimen/twenty"
+                    android:layout_height="@dimen/twenty"
+                    android:textColor="@color/white"
+                    android:text="@string/minus"
+                    android:tint="@color/icon_color"
+                    android:src="@drawable/minus"
+                    android:textSize="@dimen/eighteen">
+
+                </ImageView>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:weightSum="4"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/oneLy"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_cal"
+                    android:text="@string/one"
+                    android:gravity="center"
+                    android:background="@drawable/circle_calculator"
+                    android:textSize="@dimen/thirty">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/twoLy"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_cal"
+                    android:text="@string/two"
+                    android:gravity="center"
+                    android:background="@drawable/circle_calculator"
+                    android:textSize="@dimen/thirty">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/threeLy"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_cal"
+                    android:text="@string/three"
+                    android:gravity="center"
+                    android:background="@drawable/circle_calculator"
+                    android:textSize="@dimen/thirty">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/plusLy"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@drawable/circle_calculator">
+                <ImageView
+                    android:layout_width="@dimen/twenty"
+                    android:layout_height="@dimen/twenty"
+                    android:textColor="@color/white"
+                    android:text="@string/plus"
+                    android:tint="@color/icon_color"
+                    android:src="@drawable/plus"
+                    android:textSize="@dimen/eighteen">
+
+                </ImageView>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:weightSum="4"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/DoublezeroLy"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_cal"
+                    android:text="@string/double_zero"
+                    android:gravity="center"
+                    android:background="@drawable/circle_calculator"
+                    android:textSize="@dimen/thirty">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/zeroLy"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_cal"
+                    android:text="@string/zero"
+                    android:gravity="center"
+                    android:background="@drawable/circle_calculator"
+                    android:textSize="@dimen/thirty">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dotLy"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_cal"
+                    android:text="@string/dot"
+                    android:gravity="center"
+                    android:background="@drawable/circle_calculator"
+                    android:textSize="@dimen/thirty">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/equalLy"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@drawable/green_circle">
+                <ImageView
+                    android:layout_width="@dimen/twenty"
+                    android:layout_height="@dimen/twenty"
+                    android:textColor="@color/white"
+                    android:text="@string/equal"
+                    android:gravity="center"
+                    android:tint="@color/white"
+                    android:src="@drawable/equal"
+                    android:textSize="@dimen/thirty">
+
+                </ImageView>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    
+    
+    
+    
+</androidx.constraintlayout.widget.ConstraintLayout>

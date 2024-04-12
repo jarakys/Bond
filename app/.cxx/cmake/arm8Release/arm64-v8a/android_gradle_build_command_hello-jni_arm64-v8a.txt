@@ -1,0 +1,7 @@
+Executable : /Users/samuelelandi/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja
+arguments : 
+-C
+/Users/samuelelandi/src/bond/bond-x-app-for-android/app/.cxx/cmake/arm8Release/arm64-v8a
+hello-jni
+jvmArgs : 
+

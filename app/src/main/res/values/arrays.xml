@@ -1,0 +1,78 @@
+<resources>
+    <!-- Tones Preference -->
+    <string-array name="tones_entries">
+        <item>@string/tone_1</item>
+        <item>@string/tone_2</item>
+        <item>@string/tone_3</item>
+        <item>@string/tone_4</item>
+        <item>@string/tone_5</item>
+        <item>@string/tone_6</item>
+        <item>@string/tone_7</item>
+        <item>@string/tone_8</item>
+        <item>@string/tone_9</item>
+        <item>@string/tone_10</item>
+    </string-array>
+
+    <string-array name="tones_values">
+        <item>tone_1</item>
+        <item>tone_2</item>
+        <item>tone_3</item>
+        <item>tone_4</item>
+        <item>tone_5</item>
+        <item>tone_6</item>
+        <item>tone_7</item>
+        <item>tone_8</item>
+        <item>tone_9</item>
+        <item>tone_10</item>
+    </string-array>
+    <!-- Vibrate Preference -->
+    <string-array name="vibrate_entries">
+        <item>@string/vibrate_entries_off</item>
+        <item>@string/vibrate_entries_default</item>
+        <item>@string/vibrate_entries_short</item>
+        <item>@string/vibrate_entries_long</item>
+    </string-array>
+
+    <string-array name="vibrate_values">
+        <item>off</item>
+        <item>default</item>
+        <item>short</item>
+        <item>long</item>
+    </string-array>
+    <!-- Popup Notification Preference -->
+    <string-array name="popup_notification_entries">
+        <item>@string/popup_notification_entries_no_popup</item>
+        <item>@string/popup_notification_entries_only_when_screen_on</item>
+        <item>@string/popup_notification_entries_only_when_screen_off</item>
+        <item>@string/popup_notification_entries_always_show_popup</item>
+    </string-array>
+
+    <string-array name="popup_notification_values">
+        <item>no_popup</item>
+        <item>only_when_screen_on</item>
+        <item>only_when_screen_off</item>
+        <item>always_show_popup</item>
+    </string-array>
+    <!-- media Preference -->
+    <string-array name="media_entries">
+        <item>@string/media_photos</item>
+        <item>@string/media_audio</item>
+        <item>@string/media_videos</item>
+        <item>@string/media_documents</item>
+    </string-array>
+
+    <string-array name="media_values">
+        <item>photos</item>
+        <item>audio</item>
+        <item>videos</item>
+        <item>documents</item>
+    </string-array>
+    <array name="tick_below_text_length_5">
+        <item>@string/_1_hour</item>
+        <item>@string/_2_hours</item>
+        <item>@string/_1_day</item>
+        <item>@string/_2_days</item>
+        <item>@string/_1_week</item>
+        <item>@string/never</item>
+    </array>
+</resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginHorizontal="@dimen/_16sdp"
+    android:background="@color/white"
+    android:elevation="@dimen/_8sdp"
+    android:orientation="vertical"
+    android:paddingVertical="@dimen/_4sdp">
+
+    <TextView
+        android:id="@+id/view_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:padding="@dimen/_12sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp" />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:padding="@dimen/_12sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp" />
+
+    <TextView
+        android:id="@+id/voice_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:padding="@dimen/_12sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp" />
+
+    <TextView
+        android:id="@+id/video_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:padding="@dimen/_12sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp" />
+
+    <TextView
+        android:id="@+id/make_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:padding="@dimen/_12sdp"
+        android:text="@string/make_group_admin"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/remove_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:padding="@dimen/_12sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"
+        android:visibility="gone" />
+</LinearLayout>

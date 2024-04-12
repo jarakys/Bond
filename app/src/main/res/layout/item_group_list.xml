@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:paddingVertical="@dimen/_4sdp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/member_image"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:src="@drawable/contact"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/member_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:padding="@dimen/_10sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintEnd_toStartOf="@id/member_type"
+        app:layout_constraintStart_toEndOf="@id/member_image"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Member name" />
+
+    <TextView
+        android:id="@+id/member_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:background="@drawable/group_list_background"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:textColor="@color/green"
+        android:textSize="@dimen/_9sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Admin" />
+</androidx.constraintlayout.widget.ConstraintLayout>

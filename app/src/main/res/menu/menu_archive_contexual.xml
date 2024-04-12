@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_mute"
+        android:icon="@drawable/ic_baseline_volume_off_24"
+        app:showAsAction="always"
+        android:title="@string/mute" />
+
+    <item
+        android:id="@+id/action_unarchive"
+        android:icon="@drawable/ic_baseline_unarchive_24"
+        android:title="@string/archive"
+        app:showAsAction="always"
+        />
+</menu>

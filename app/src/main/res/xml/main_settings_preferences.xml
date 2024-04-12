@@ -1,0 +1,43 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<!--        <Preference-->
+<!--            app:key="account_preference"-->
+<!--            app:title="@string/account_header"-->
+<!--            app:summary="@string/account_settings_summary"-->
+<!--            app:icon="@drawable/contact"-->
+<!--            app:layout="@layout/item_settings_account" />-->
+        <Preference
+            app:fragment="com.ec.bond.activity.ui.settings.chatsettings.SettingChatsFragment"
+            app:icon="@drawable/chat"
+            app:key="chat_header"
+            app:title="@string/chat_header"
+            app:singleLineTitle="true"
+            app:layout="@layout/layout_preference"
+            app:summary="@string/cahts_settings_summary"/>
+        <Preference
+            app:fragment="com.ec.bond.activity.ui.settings.usagedata.SettingsUsageDataFragment"
+            app:icon="@drawable/big_data"
+            app:key="data_usage"
+            app:layout="@layout/layout_preference"
+            app:summary="@string/data_usage_summary"
+            app:title="@string/data_usage_header" />
+        <Preference
+            app:fragment="com.ec.bond.activity.ui.settings.storageusage.SettingsStorageUsageFragment"
+            app:icon="@drawable/rec"
+            app:key="storage_usage"
+            app:layout="@layout/layout_preference"
+            app:summary="@string/storage_usage_summary"
+            app:title="@string/storage_usage_header" />
+        <Preference
+            android:fragment="com.ec.bond.activity.ui.settings.help.HelpSettingsFragment"
+            app:icon="@drawable/question"
+            app:key="help_header"
+            app:layout="@layout/layout_preference"
+            app:summary="FAQ, contact us"
+            app:title="@string/help_header" />
+        <Preference
+            app:selectable="false"
+            app:summary="0.0"
+            app:key="app_version"
+            app:layout="@layout/layout_app_version"/>
+</PreferenceScreen>

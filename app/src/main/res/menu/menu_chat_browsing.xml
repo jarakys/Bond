@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_voiceCall"
+        android:icon="@drawable/phone_call"
+        android:orderInCategory="100"
+        android:title="@string/action_voiceCall"
+        android:iconTintMode="add"
+        android:iconTint="@color/white"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_videoCall"
+        android:icon="@drawable/video_call"
+        android:orderInCategory="100"
+        android:title="@string/action_videoCall"
+        android:iconTint="@color/white"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_autoDelete"
+        android:title="@string/auto_delete" />
+    <item
+        android:id="@+id/action_search"
+        android:title="@string/action_search" />
+    <item
+        android:id="@+id/action_clearChat"
+        android:title="@string/clear_caht" />
+
+</menu>

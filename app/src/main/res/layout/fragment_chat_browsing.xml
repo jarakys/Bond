@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/lightgray">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_toolbarsearch"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ChatBrowsingToolbarTheme"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Hello"
+        app:titleTextColor="#FFFFFF">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/chatBrowsingInfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/userIV_cardView"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/userIV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/contact"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.cardview.widget.CardView>
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/userIV"-->
+            <!--                android:layout_width="55dp"-->
+            <!--                android:layout_height="57dp"-->
+            <!--                android:scaleType="centerCrop"-->
+            <!--                android:src="@drawable/logo"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintHorizontal_bias="0.0"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toTopOf="parent"-->
+            <!--                app:layout_constraintVertical_bias="0.0" />-->
+
+            <LinearLayout
+                android:id="@+id/chatHeaderView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:background="?attr/selectableItemBackground"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@id/autoDelete_Btn"
+                app:layout_constraintStart_toEndOf="@id/userIV_cardView">
+
+                <TextView
+                    android:id="@+id/nameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="6dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/lastSeenTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_12sp" />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/autoDelete_Btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="6dp"
+                android:padding="9dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/video_call_Btn"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/quick_timer"
+                app:tint="#FFFFFF" />
+
+            <ImageButton
+                android:id="@+id/video_call_Btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="6dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+
+                android:padding="9dp"
+                android:scaleType="fitXY"
+                android:tint="@color/white"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/call_Btn"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/video_call" />
+
+            <ImageButton
+                android:id="@+id/call_Btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+
+                android:padding="9dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/phone_call"
+                android:tint="@color/white"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/chatBrowsingSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            tools:layout_editor_absoluteX="411dp">
+
+            <EditText
+                android:id="@+id/search_TV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="15dp"
+                android:hint="@string/search_hint"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textColor="@color/white"
+                android:textColorHint="#80C4BD"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/searchArrows_layout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/searchArrows_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/searchDown_IV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:background="?android:attr/actionBarItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foregroundGravity="center"
+                    android:padding="5dp"
+                    android:scaleType="matrix"
+
+                    android:src="@drawable/chevron_down"
+                    android:visibility="visible"
+                    app:tint="@color/white" />
+
+                <ProgressBar
+                    android:id="@+id/searchDown_progress"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foregroundGravity="center_vertical|center"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/colorAccent" />
+
+                <ImageView
+                    android:id="@+id/searchUp_IV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:background="?android:attr/actionBarItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foregroundGravity="center"
+                    android:padding="5dp"
+                    android:scaleType="matrix"
+                    android:src="@drawable/chevron_up"
+                    android:visibility="visible"
+                    app:tint="@color/white" />
+
+                <ProgressBar
+                    android:id="@+id/searchUp_progress"
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="clip_vertical"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foregroundGravity="center"
+
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/colorAccent" />
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/default_wallpaper"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_toolbarsearch">
+
+        <LinearLayout
+            android:id="@+id/recording"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:id="@+id/layoutContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/chatsBrowsingRecyclerView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="5dp"
+                                android:clipToPadding="false"
+                                android:foregroundGravity="center"
+                                android:paddingTop="5dp"
+                                tools:listitem="@layout/item_chat_sent_message" />
+                        </LinearLayout>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/layoutAttachment"
+                            android:layout_width="match_parent"
+                            android:layout_height="220dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:elevation="0dp"
+                            android:translationZ="0dp"
+                            android:visibility="gone"
+                            app:cardBackgroundColor="#FFFFFF"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="2dp"
+                            app:cardPreventCornerOverlap="false"
+                            app:cardUseCompatPadding="true"
+                            app:contentPadding="0dp">
+
+                            <LinearLayout
+                                android:id="@+id/layoutAttachmentOptions"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+                    </FrameLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/sendMessage_ConstraintLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginEnd="56dp"
+                        android:layout_marginRight="56dp"
+                        android:layout_marginBottom="4dp"
+                        android:elevation="0dp"
+                        android:gravity="center_vertical"
+                        android:translationZ="0dp"
+                        app:cardBackgroundColor="#FFFFFF"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="2dp"
+                        app:cardPreventCornerOverlap="false"
+                        app:cardUseCompatPadding="true"
+                        app:contentPadding="0dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/sendMessage_replyPart_ConstraintLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="44dp"
+                            android:background="@drawable/rect_round_reply"
+                            android:visibility="gone">
+
+                            <View
+                                android:id="@+id/lineReplyDecoration"
+                                android:layout_width="4dp"
+                                android:layout_height="0dp"
+                                android:background="@drawable/rounded_reply_view_decoration_outgoing"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/replyOwnerMsgName_Txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="5dp"
+                                android:text="You"
+                                android:textColor="@color/whatsapp_color"
+                                app:layout_constraintStart_toEndOf="@+id/lineReplyDecoration"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/mediaReply_imageView"
+                                android:layout_width="60dp"
+                                android:layout_height="0dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/logo_old"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cancelReply_CV"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginEnd="3dp"
+                                app:cardBackgroundColor="#D5F7F7F7"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="0dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageButton
+                                    android:id="@+id/cancelReply_Btn"
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"
+                                    android:layout_gravity="center"
+                                    android:background="@android:color/transparent"
+                                    android:src="@drawable/delete_icon" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/replyOwnerMsg_Txt"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:ellipsize="end"
+                                android:maxLines="3"
+                                android:text="TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView "
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/mediaReply_imageView"
+                                app:layout_constraintStart_toEndOf="@+id/mediaTypeReply_imageView"
+                                app:layout_constraintTop_toBottomOf="@+id/replyOwnerMsgName_Txt"
+                                app:layout_constraintVertical_bias="1.0" />
+
+                            <ImageView
+                                android:id="@+id/mediaTypeReply_imageView"
+                                android:layout_width="15dp"
+                                android:layout_height="14dp"
+                                android:layout_marginTop="8dp"
+                                android:paddingEnd="5dp"
+                                android:scaleType="centerCrop"
+                                android:visibility="gone"
+                                app:layout_constraintStart_toStartOf="@+id/replyOwnerMsgName_Txt"
+                                app:layout_constraintTop_toBottomOf="@+id/replyOwnerMsgName_Txt"
+                                app:srcCompat="@drawable/last_msg_photo" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/emoji_IV"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginBottom="2dp"
+                                android:background="@drawable/round_ripple_circle"
+                                android:padding="8dp"
+                                android:src="@drawable/input_emoji" />
+                            <!--                            <com.aghajari.emojiview.view.AXEmojiEditText-->
+                            <!--                                android:layout_width="wrap_content"-->
+                            <!--                                android:layout_height="wrap_content" />-->
+                            <com.aghajari.emojiview.view.AXEmojiEditText
+                                android:id="@+id/editText"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:ems="10"
+                                android:textIsSelectable="true"
+                                android:bufferType="spannable"
+                                android:hint="@string/type_a_message"
+                                android:inputType="textMultiLine"
+                                android:maxLines="6"
+                                android:paddingStart="4dp"
+                                android:paddingLeft="4dp"
+                                android:paddingTop="8dp"
+                                android:paddingEnd="4dp"
+                                android:paddingRight="4dp"
+                                android:paddingBottom="8dp" />
+
+                            <ImageView
+                                android:id="@+id/attachment_IV"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginEnd="4dp"
+                                android:layout_marginRight="4dp"
+                                android:layout_marginBottom="2dp"
+                                android:background="@drawable/round_ripple_circle"
+                                android:padding="8dp"
+                                android:src="@drawable/ib_attach" />
+
+                            <ImageView
+                                android:id="@+id/camera_IV"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginRight="8dp"
+                                android:background="@drawable/round_ripple_circle"
+                                android:padding="8dp"
+                                android:src="@drawable/ib_camera" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/slideCancel_Layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginEnd="88dp"
+                    android:layout_marginRight="88dp"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:rotation="-90"
+                        android:src="@drawable/arrow" />
+
+                    <TextView
+                        android:id="@+id/slide_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/slide_to_cancel"
+                        android:textColor="#898f9d"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cancel_Layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginEnd="80dp"
+                    android:layout_marginRight="80dp"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+
+                    <TextView
+                        android:id="@+id/cancel_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/cancel"
+                        android:textAllCaps="true"
+                        android:textColor="@color/cancel_red"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/effect1_Layout"
+                    android:layout_width="70dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#ffffff"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/effect2_Layout"
+                    android:layout_width="20dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="90dp"
+                    android:layout_marginLeft="90dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/shadow"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/mic_IV"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="12dp"
+                    android:elevation="2dp"
+                    android:paddingBottom="2dp"
+                    android:src="@drawable/mic_ic"
+                    android:translationZ="10dp"
+                    android:visibility="gone"
+                    app:tint="@color/cancel_red" />
+
+                <LinearLayout
+                    android:id="@+id/trash_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:elevation="2dp"
+                    android:gravity="left|bottom"
+                    android:orientation="vertical"
+                    android:translationZ="10dp">
+
+                    <ImageView
+                        android:id="@+id/trash_cover"
+                        android:layout_width="32dp"
+                        android:layout_height="4dp"
+                        android:src="@drawable/dustbin_cover_ic"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/trash"
+                        android:layout_width="16dp"
+                        android:layout_height="18dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:src="@drawable/dustbin_wheel_ic"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/recordTimer_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginLeft="32dp"
+                    android:elevation="2dp"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="0:00"
+                    android:textSize="20sp"
+                    android:textStyle="normal"
+                    android:translationZ="10dp"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/layoutLock"
+            android:layout_width="56dp"
+            android:layout_height="180dp"
+            android:layout_gravity="right|bottom"
+            android:layout_margin="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="#FFFFFF"
+            android:translationZ="2dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="2dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|top"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/lock_IV"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:padding="18dp"
+                    android:src="@drawable/ic_lock" />
+
+                <ImageView
+                    android:id="@+id/lockArrow_IV"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="-8dp"
+                    android:src="@drawable/arrow" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/recordAudio_IV"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="6dp"
+            android:background="#FFFFFF"
+            android:clickable="true"
+            android:elevation="2dp"
+            android:translationZ="2dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="2dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="false"
+            app:contentPadding="0dp">
+
+            <ImageView
+                android:id="@+id/imageAudio"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:src="@drawable/record_audio_ic" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sendAudio_IV"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="6dp"
+            android:background="#FFFFFF"
+            android:clickable="true"
+            android:elevation="2dp"
+            android:translationZ="2dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="2dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="false"
+            app:contentPadding="0dp">
+
+            <ImageView
+                android:id="@+id/imageStop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/stop_record_ic" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sendMessage_IV"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="6dp"
+            android:background="#FFFFFF"
+            android:clickable="true"
+            android:elevation="2dp"
+            android:translationZ="2dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="2dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="false"
+            app:contentPadding="0dp">
+
+            <ImageView
+                android:id="@+id/imageSend"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/send_msg_ic" />
+
+        </androidx.cardview.widget.CardView>
+
+        <ProgressBar
+            android:id="@+id/progressBar_chatBrowsing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/dateSection_include"
+            layout="@layout/item_date_chat_browsing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:elevation="50dp"
+            android:visibility="gone" />
+
+        <include
+            layout="@layout/scroll_bottom_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="65dp"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/openImage_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/toolbar_openImage"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@color/black_transparent"-->
+<!--            android:elevation="4dp"-->
+<!--            android:minHeight="?attr/actionBarSize"-->
+<!--            android:theme="@style/ToolbarTheme"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:title="Reciepient"-->
+<!--            app:titleTextColor="@color/white" />-->
+
+        <TextView
+            android:id="@+id/waterMark_TV_fullscreen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="-290dp"
+            android:layout_marginEnd="-200dp"
+            android:layout_marginBottom="-50dp"
+            android:elevation="3dp"
+            android:rotation="-45"
+            android:text="Top Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmakTop Secret 2d77fc6eb4fa28598b01c2aa5a2da780de8f561cbdb7463a953f4b1e112f7f0f # سري للغاية المصمك masmak"
+            android:textColor="#B288898B"
+            android:textSize="16dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/single_image_back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/image_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/black_transparent"
+            android:theme="@style/ChatBrowsingToolbarTheme"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp"
+            android:elevation="10dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:alpha="1"
+            app:title="Hello"
+            app:navigationIcon="@drawable/ic_back"
+            app:titleTextColor="#FFFFFF" />
+
+            <com.alexvasilkov.gestures.views.GestureImageView
+                android:id="@+id/expanded_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#80000000"
+                android:src="@drawable/logo_old"
+                android:visibility="gone"
+                app:gest_doubleTapEnabled="true"
+                app:gest_exitEnabled="true"
+                app:gest_gravity="center"
+                app:gest_rotationEnabled="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <com.alexvasilkov.gestures.views.GestureFrameLayout
+            android:id="@+id/expanded_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:gest_doubleTapEnabled="true"
+            app:gest_exitEnabled="true"
+            app:gest_gravity="center"
+            app:gest_rotationEnabled="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <VideoView
+                android:id="@+id/openVideo_videoView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:visibility="gone"
+                android:elevation="2dp" />
+        </com.alexvasilkov.gestures.views.GestureFrameLayout>
+        <TextView
+            android:id="@+id/messageBody_TV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/black_transparent"
+            android:padding="20dp"
+            android:textColor="@color/primaryColor"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

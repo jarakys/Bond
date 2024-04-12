@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/_16sdp"
+    android:background="@color/green"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/deleteTv"
+        android:layout_width="wrap_content"
+        android:text="Delete Contact"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"></TextView>
+    <View
+        android:id="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/deleteTv"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10sp"
+        android:background="@color/white"
+        android:layout_height="1sp">
+
+    </View>
+
+    <TextView
+        android:id="@+id/editTv"
+        android:layout_width="wrap_content"
+        android:text="Edit Contact"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        android:layout_marginTop="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"></TextView>
+</androidx.constraintlayout.widget.ConstraintLayout>

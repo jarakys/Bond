@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <scale android:fromXScale="50sp" android:toXScale="-50sp" android:fromYScale="50sp" android:toYScale="0sp"
+        android:interpolator="@android:anim/accelerate_interpolator"
+        android:duration="500"/>
+
+</set>

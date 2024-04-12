@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_256sdp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false">
+
+            <ImageView
+                android:id="@+id/headerImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/placeholder"
+                android:backgroundTint="#0FFFFFFF"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_gravity="top"
+                android:background="@drawable/scrim_topdown"
+                android:fitsSystemWindows="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_160sdp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/scrim" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/anim_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <include
+                    android:id="@+id/toolbar_header_view"
+                    layout="@layout/widget_header_view_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include
+        android:id="@+id/float_header_view"
+        layout="@layout/widget_header_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/scrollView"
+        app:layout_behavior=".custom_views.CollapsingHeaderBehaviour" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/off_white"
+        android:paddingVertical="@dimen/_4sdp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:elevation="@dimen/_6sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/starred_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:paddingHorizontal="@dimen/_12sdp"
+                    android:paddingVertical="@dimen/_12sdp"
+                    android:text="@string/starred_messages"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height=".1dp"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:background="@color/light_grey" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/custom_tone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:paddingHorizontal="@dimen/_12sdp"
+                        android:paddingVertical="@dimen/_12sdp"
+                        android:text="@string/custom_tone"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <TextView
+                        android:id="@+id/custom_tone_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:layout_toStartOf="@id/arrow_indicator"
+                        android:text="Default"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <ImageView
+                        android:id="@+id/arrow_indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/disclosure_indicator"
+                        app:tint="@color/gray" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/temporary_group_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".1dp"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:background="@color/light_grey" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/temporary_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/_12sdp"
+                        android:paddingVertical="@dimen/_12sdp"
+                        android:text="@string/temporary_group_text"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <RelativeLayout
+                        android:id="@+id/temporary_group_delete_date_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_12sdp"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:text="@string/will_be_deleted_on"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <TextView
+                            android:id="@+id/temporary_group_delete_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/_12sdp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/status_and_phone_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@color/white"
+                android:elevation="@dimen/_6sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/phoneNumTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_12sdp"
+                    android:paddingVertical="@dimen/_6sdp"
+                    android:text="@string/phone_number"
+                    android:textColor="@color/green_dark" />
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp"
+                    tools:text="At Meeting" />
+
+                <RelativeLayout
+                    android:id="@+id/status_divider_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:paddingVertical="@dimen/_4sdp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".1dp"
+                        android:background="@color/light_grey" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_12sdp"
+                    android:paddingVertical="@dimen/_8sdp">
+
+                    <TextView
+                        android:id="@+id/phone_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16sdp"
+                        tools:text="+2 4328749237" />
+
+                    <ImageView
+                        android:id="@+id/message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:layout_toStartOf="@id/voice_call"
+                        android:background="?android:attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/messages"
+                        app:tint="@color/green_dark" />
+
+                    <ImageView
+                        android:id="@+id/voice_call"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:layout_toStartOf="@id/video_call"
+                        android:background="?android:attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_call_white_24dp"
+                        app:tint="@color/green_dark" />
+
+                    <ImageView
+                        android:id="@+id/video_call"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="?android:attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/video_call"
+                        app:tint="@color/green_dark" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/group_members_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@color/white"
+                android:elevation="@dimen/_6sdp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/clear_chat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@color/white"
+                android:elevation="@dimen/_6sdp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:paddingHorizontal="@dimen/_12sdp"
+                android:paddingVertical="@dimen/_12sdp"
+                android:text="@string/clear_chat"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp" />
+
+            <TextView
+                android:id="@+id/exit_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@color/white"
+                android:drawablePadding="@dimen/_8sdp"
+                android:elevation="@dimen/_6sdp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_12sdp"
+                android:text="@string/exit_group"
+                android:textColor="@color/red"
+                android:textSize="@dimen/_14sdp"
+                android:visibility="gone"
+                app:drawableStartCompat="@drawable/ic_baseline_exit_to_app_24" />
+
+            <TextView
+                android:id="@+id/delete_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@color/white"
+                android:drawablePadding="@dimen/_8sdp"
+                android:elevation="@dimen/_6sdp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_12sdp"
+                android:text="@string/delete_group"
+                android:textColor="@color/red"
+                android:textSize="@dimen/_14sdp"
+                android:visibility="gone"
+                app:drawableStartCompat="@drawable/ic_baseline_delete_forever_24" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

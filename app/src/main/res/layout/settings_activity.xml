@@ -1,0 +1,111 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/constraintsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/settings_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:subtitleTextColor="#FFFFFF"
+        app:titleTextColor="#FFFFFF" />
+    <ProgressBar
+        android:id="@+id/settings_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintsLayout"
+        app:layout_constraintEnd_toEndOf="@+id/constraintsLayout"
+        app:layout_constraintStart_toStartOf="@+id/constraintsLayout"
+        app:layout_constraintTop_toTopOf="@+id/constraintsLayout" />
+
+    <include
+        android:id="@+id/item_settings_account_include"
+        layout="@layout/item_settings_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_toolbar" />
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/account_constrains"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="?attr/selectableItemBackground"-->
+<!--        android:clickable="true"-->
+<!--        android:focusable="true"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/settings_toolbar">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/account_shared_image"-->
+<!--            android:layout_width="65sp"-->
+<!--            android:layout_height="65sp"-->
+<!--            android:layout_marginStart="15dp"-->
+<!--            android:layout_marginTop="20sp"-->
+<!--            android:layout_marginBottom="20sp"-->
+<!--            android:src="@drawable/logo"-->
+<!--            android:transitionName="account_image_transition"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <TextView-->
+<!--            android:id="@android:id/title"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="15dp"-->
+<!--            android:layout_marginTop="30sp"-->
+<!--            android:maxLines="1"-->
+<!--            android:text="@string/account_header"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="20sp"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/account_shared_image"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <TextView-->
+<!--            android:id="@android:id/summary"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="30sp"-->
+<!--            android:text="@string/account_settings_summary"-->
+<!--            android:textSize="12sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="@android:id/title" />-->
+
+<!--        <View-->
+<!--            android:id="@+id/view2"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="1dp"-->
+<!--            android:background="@color/light_gray"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/call_status_imageView"-->
+<!--            tools:ignore="MissingConstraints" />-->
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+    <FrameLayout
+        android:id="@+id/settings"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintsLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_settings_account_include" >
+
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

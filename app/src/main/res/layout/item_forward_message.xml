@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:longClickable="true">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/contact_image_cardView"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="@dimen/_25sdp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/contact_imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/contact"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.cardview.widget.CardView>
+<!--    <ImageView-->
+<!--        android:id="@+id/contact_imageView"-->
+<!--        android:layout_width="@dimen/_50sdp"-->
+<!--        android:layout_height="@dimen/_50sdp"-->
+<!--        android:layout_marginStart="@dimen/_15sdp"-->
+<!--        android:layout_marginTop="@dimen/_8sdp"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:src="@drawable/contact"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <TextView
+        android:id="@+id/contact_name_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Name"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="@dimen/_14sdp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/contact_number"
+        app:layout_constraintStart_toEndOf="@+id/contact_image_cardView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/contact_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Number"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/contact_image_cardView"
+        app:layout_constraintTop_toBottomOf="@+id/contact_name_txt" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/light_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/contact_name_txt"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/item_selectedCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_background_selected"
+        android:padding="@dimen/_2sdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/contact_image_cardView"
+        app:layout_constraintEnd_toEndOf="@+id/contact_image_cardView"
+        app:srcCompat="@drawable/selected_ok" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

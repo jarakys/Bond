@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--    <shape xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--        android:shape="rectangle">-->
+<!--        &lt;!&ndash; view background color &ndash;&gt;-->
+<!--        &lt;!&ndash;<solid android:color="@color/bg_msg_right" >&ndash;&gt;-->
+<!--        <solid android:color="#e1ffc7" >-->
+
+<!--        </solid>-->
+<!--        <size android:width="20dp"-->
+<!--            android:height="20dp" />-->
+<!--        <corners-->
+<!--            android:topLeftRadius="0dp"-->
+<!--            android:topRightRadius="0dp"-->
+<!--            android:bottomLeftRadius="5dp"-->
+<!--            android:bottomRightRadius="200dp">-->
+<!--        </corners>-->
+
+<!--    </shape>-->
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >-->
+<!--    <item >-->
+<!--        <rotate-->
+<!--            android:fromDegrees="45"-->
+<!--            android:toDegrees="45"-->
+<!--            android:pivotX="-50%"-->
+<!--            android:pivotY="100%" >-->
+<!--            <shape-->
+<!--                android:shape="rectangle"  >-->
+<!--                <stroke android:color="@android:color/transparent" android:width="10dp"/>-->
+<!--                <solid-->
+<!--                    android:color="#e1ffc7"  />-->
+<!--            </shape>-->
+<!--        </rotate>-->
+<!--    </item>-->
+<!--</layer-list>-->
+<!--<shape xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:shape="rectangle" >-->
+
+<!--    &lt;!&ndash; view background color &ndash;&gt;-->
+<!--    &lt;!&ndash;<solid android:color="@color/bg_msg_right" >&ndash;&gt;-->
+<!--    <solid android:color="#e1ffc7" >-->
+<!--    </solid>-->
+
+<!--    <corners-->
+<!--        android:topLeftRadius="5dp"-->
+<!--        android:topRightRadius="0dp"-->
+<!--        android:bottomLeftRadius="5dp"-->
+<!--        android:bottomRightRadius="5dp">-->
+<!--    </corners>-->
+
+<!--</shape>-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="32dp"
+        android:height="30dp"
+        android:viewportWidth="20.0"
+        android:viewportHeight="20.0">
+        <path
+            android:fillColor="#e1ffc7"
+            android:pathData="M8,5v14l11,-14z"/>
+    </vector>
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--    <item>-->
+<!--        <vector xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--            android:width="24dp"-->
+<!--            android:height="30dp"-->
+<!--            android:viewportWidth="20.0"-->
+<!--            android:viewportHeight="20.0">-->
+<!--            <path-->
+<!--                android:fillColor="#e1ffc7"-->
+<!--                android:pathData="M8,5v14l11,-14z"/>-->
+<!--        </vector>-->
+<!--    </item>-->
+<!--    <item>-->
+<!--        <vector xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--            android:width="24dp"-->
+<!--            android:height="30dp"-->
+<!--            android:viewportWidth="20.0"-->
+<!--            android:viewportHeight="20.0">-->
+<!--            <path-->
+<!--                android:fillColor="#e1ffc7"-->
+<!--                android:pathData="M8,5v14l11,-14z"/>-->
+<!--        </vector>-->
+<!--    </item>-->
+<!--</layer-list>-->
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--    <item>-->
+<!--        <vector-->
+<!--            android:width="24dp"-->
+<!--            android:height="30dp"-->
+<!--            android:viewportWidth="20.0"-->
+<!--            android:viewportHeight="20.0">-->
+<!--            <group android:translateY="1">-->
+<!--                <path-->
+<!--                    android:strokeColor="@colors/GradientStrokeBorder"-->
+<!--                    android:pathData="M8,5v14l11,-14z" />-->
+<!--            </group>-->
+<!--        </vector>-->
+<!--    </item>-->
+<!--    <item>-->
+<!--        <vector-->
+<!--            android:width="24dp"-->
+<!--            android:height="30dp"-->
+<!--            android:viewportWidth="20.0"-->
+<!--            android:viewportHeight="20.0">-->
+<!--            <group android:translateY="-0.5"-->
+<!--                android:translateX="1.2">-->
+<!--                <path-->
+<!--                    android:fillColor="@colors/GradientStrokeBorder"-->
+<!--                    android:pathData="M8,5v14l11,-14z" />-->
+<!--            </group>-->
+<!--        </vector>-->
+<!--    </item>-->
+<!--    <item>-->
+<!--        <vector-->
+<!--            android:width="24dp"-->
+<!--        android:height="30dp"-->
+<!--            android:viewportWidth="20.0"-->
+<!--            android:viewportHeight="20.0">-->
+<!--            <path-->
+<!--                android:fillColor="#e1ffc7"-->
+<!--                android:pathData="M8,5v14l11,-14z" />-->
+<!--        </vector>-->
+<!--    </item>-->
+
+<!--</layer-list>-->

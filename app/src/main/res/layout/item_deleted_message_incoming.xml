@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/message_relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/messageFrame_relativeLayout"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="70dp"
+        android:background="@drawable/bg_msg_left"
+        android:layout_toRightOf="@id/message_arrow"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:elevation="2dp"
+        android:padding="4dp">
+        <RelativeLayout
+            android:id="@+id/group_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingBottom="3dp"
+            android:paddingStart="2dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/contact_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hassan Khamis"
+                android:textColor="#2196F3" />
+        </RelativeLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/deletedMessage_constraintLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_below="@+id/group_layout"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/deleteMessage_txt"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:singleLine="false"
+                android:text="@string/this_message_was_deleted"
+                android:textColor="@color/deleted_message"
+                android:textSize="14dp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/deleteIcon_imageView"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_conversion_absoluteHeight="19dp"
+                tools:layout_conversion_absoluteWidth="31dp" />
+
+            <ImageView
+                android:id="@+id/deleteIcon_imageView"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="3dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/deletemessage_circle_gray" />
+
+            <TextView
+                android:id="@+id/timeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1:30 P.M."
+                android:textSize="@dimen/size_12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/message_arrow"
+        android:layout_width="15dp"
+        android:layout_height="17dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="-5dp"
+        android:layout_marginEnd="-5dp"
+        android:background="@drawable/v_bubble_corner_left"
+
+        android:elevation="2dp"
+        android:rotation="90"
+        android:scaleX="1.5" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/message_arrow"-->
+<!--        android:layout_width="16dp"-->
+<!--        android:layout_height="35dp"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_marginTop="-15.5dp"-->
+<!--        android:layout_marginEnd="-4.5dp"-->
+<!--        android:layout_marginStart="10dp"-->
+<!--        android:background="@null"-->
+<!--        android:rotation="90"-->
+<!--        android:scaleX="1.5"-->
+<!--        android:src="@drawable/v_bubble_corner_left" />-->
+</RelativeLayout>

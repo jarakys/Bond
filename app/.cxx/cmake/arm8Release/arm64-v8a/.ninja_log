@@ -1,0 +1,4 @@
+# ninja log v5
+0	3325	1650172939	CMakeFiles/hello-jni.dir/blackboxcalls.c.o	cfee76713dd76351
+1	7075	1650172942	CMakeFiles/hello-jni.dir/blackbox.c.o	263a3ae07a997087
+7146	8083	1650172943	/Users/samuelelandi/src/bond/bond-x-app-for-android/app/build/intermediates/cmake/arm8Release/obj/arm64-v8a/libhello-jni.so	eca285e895dd7e2d

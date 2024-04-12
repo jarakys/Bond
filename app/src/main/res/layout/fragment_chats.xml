@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <!--<TextView
+        android:id="@+id/tv_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="left"
+        android:padding="@dimen/_5sdp"
+        android:text="Done"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_edit"
+        android:layout_width="@dimen/_34sdp"
+        android:layout_height="@dimen/_34sdp"
+        android:layout_marginTop="@dimen/_11sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/ic_edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_done"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    -<view
+           android:id="@+id/view_1"
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:layout_marginStart="10dp"
+           android:layout_marginTop="100dp"
+           android:layout_marginEnd="10dp"
+           android:layout_marginBottom="8dp"
+           android:background="@color/lightgray"
+           app:layout_constraintBottom_toTopOf="@+id/tv_done"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_broadcast_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="left"
+        android:padding="@dimen/_5sdp"
+        android:text="Broadcast Lists"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/_14sdp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/sv_chats"
+        tools:layout_editor_absoluteX="5dp" />
+
+
+    <TextView
+        android:id="@+id/tv_new_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="right"
+        android:padding="@dimen/_5sdp"
+        android:text="New Group"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/_14sdp"
+
+        app:layout_constraintTop_toBottomOf="@+id/sv_chats"
+        tools:layout_editor_absoluteX="10dp"
+        tools:visibility="gone" />-->
+    <!--
+        <TextView
+            android:id="@+id/tv_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:text="Chats"
+            android:textColor="#000000"
+            android:textSize="@dimen/_24sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tv_broadcast_list"
+            app:layout_constraintEnd_toStartOf="@+id/tv_broadcast_list"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.071" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/sv_chats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:iconifiedByDefault="false"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/search_bg"
+        android:queryHint="Search"
+        app:layout_constraintBottom_toTopOf="@+id/tv_broadcast_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_chat" />
+
+    <View
+        android:id="@+id/view_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/dark_gray"
+        app:layout_constraintTop_toBottomOf="@+id/sv_chats" />-->
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_contact_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

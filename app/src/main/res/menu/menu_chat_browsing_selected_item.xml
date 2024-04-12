@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="info.androidhive.recyclerviewsearch.MainActivity">
+    <item
+        android:id="@+id/action_replyMsg"
+        android:checked="false"
+        android:visible="false"
+        android:icon="@drawable/reply_arrow_icon"
+        android:orderInCategory="5"
+        android:title="@string/action_replyMsg"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_starMsg"
+        android:icon="@drawable/star_icon"
+        android:orderInCategory="100"
+        android:visible="false"
+        android:title="@string/action_starMsg"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_deleteMsg"
+        android:icon="@drawable/remove_icon"
+        android:orderInCategory="100"
+        android:visible="false"
+        android:title="@string/action_deleteMsg"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_forwardMsg"
+        android:icon="@drawable/forward_icon"
+        android:orderInCategory="100"
+        android:visible="false"
+        android:title="@string/action_forwardMsg"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_msg_info"
+        android:visible="false"
+        android:title="@string/info" />
+    <item
+        android:id="@+id/action_msg_copy"
+        android:visible="false"
+        android:title="@string/copy" />
+
+</menu>

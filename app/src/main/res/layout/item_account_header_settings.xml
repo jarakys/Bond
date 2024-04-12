@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".activity.AccountSettingsActivity">
+
+    <!--    <androidx.cardview.widget.CardView-->
+    <!--        android:id="@+id/account_shared_cardView"-->
+    <!--        android:layout_width="284dp"-->
+    <!--        android:layout_height="284dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.495"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        android:transitionName="account_imageCardView_transition"-->
+    <!--        app:cardCornerRadius="142dp">-->
+    <!--    <ImageView-->
+    <!--        android:id="@+id/imageView2"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="284dp"-->
+    <!--        android:scaleType="fitXY"-->
+    <!--        android:transitionName="account_image_transition"-->
+
+    <!--        app:layout_constraintVertical_bias="0.683"-->
+    <!--        android:src="@drawable/logo"/>-->
+    <!--    </androidx.cardview.widget.CardView>-->
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/accountInfo_shared_image"
+        android:layout_width="170sp"
+        android:layout_height="170sp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:src="@drawable/logo_old"
+        android:transitionName="account_image_transition"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/select_new_image"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:src="@drawable/camera_select_image"
+        android:transitionName="select_image_transition"
+        app:layout_constraintBottom_toBottomOf="@+id/accountInfo_shared_image"
+        app:layout_constraintEnd_toEndOf="@+id/accountInfo_shared_image" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

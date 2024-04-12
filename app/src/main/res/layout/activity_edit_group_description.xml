@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.EditGroupDescriptionActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ToolbarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:hint="@string/subject"
+                android:importantForAutofill="no"
+                android:paddingEnd="@dimen/_25sdp"
+                android:inputType="text"
+                android:maxLength="30"
+                android:padding="@dimen/_8sdp"
+                tools:ignore="LabelFor">
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/char_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:textSize="@dimen/_10sdp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/emoji_icon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            android:padding="8dp"
+            android:src="@drawable/input_emoji"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.15dp"
+        android:background="@color/grey_contact_name"
+        app:layout_constraintBottom_toTopOf="@id/footer_container" />
+
+    <LinearLayout
+        android:id="@+id/footer_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancel_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <View
+            android:layout_width="0.15dp"
+            android:layout_height="match_parent"
+            android:background="@color/grey_contact_name" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/confirm_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="@string/ok_message"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

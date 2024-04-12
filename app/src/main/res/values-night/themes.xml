@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Calculator.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="colorPrimary">@color/cal_night</item>
+        <item name="colorPrimaryVariant">@color/cal_night</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="backgroundColor">@color/cal_night</item>
+
+    </style>
+</resources>

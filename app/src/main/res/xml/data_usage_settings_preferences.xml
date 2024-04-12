@@ -1,0 +1,25 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="Media auto-download"
+        app:iconSpaceReserved="false"
+        app:key="media_auto_download"
+        app:singleLineTitle="false">
+        <PreferenceScreen app:summary="Voice messages are always auto-downloaded for the best communication experience"
+            app:iconSpaceReserved="false"/>
+        <MultiSelectListPreference
+            app:key="when_using_mobile_data_preference"
+            app:title="When using mobile data"
+            app:entryValues="@array/media_values"
+            app:entries="@array/media_entries"
+            app:iconSpaceReserved="false"/>
+        <MultiSelectListPreference
+            app:key="when_connected_on_wifi_preference"
+            app:title="When connected on Wi-Fi"
+            app:entryValues="@array/media_values"
+            app:entries="@array/media_entries"
+            app:iconSpaceReserved="false"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory app:title="Usage"
+        app:iconSpaceReserved="false">
+        <Preference app:key="storage_value_data_storage_usage"
+            app:title="Storage usage"
+            app:summary="0 kB"
+            app:iconSpaceReserved="false"/>
+
+    </PreferenceCategory>
+</PreferenceScreen>
